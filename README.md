@@ -73,3 +73,7 @@ public class Singleton
 Singleton single = Singleton.GetInstance();
 single.DoSome();
 ```
+
+<p align="center">
+  <img width="471" height="400" src="./resources/singleton/struct.png">
+</p>
