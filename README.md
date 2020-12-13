@@ -1,5 +1,3 @@
-<!-- center code math uml theme:moon -->
-
 # Паттерны
 
 ## Порождающие
