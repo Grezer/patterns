@@ -4,7 +4,7 @@
 
 ### Создание объектов. Нужны, что бы объекты точно удалялись (не оставались как балласт) и не удалялись раньше времени
 
-1. Singleton
+1. [Singleton](https://github.com/Grezer/patterns#singleton)
 2. Factory method
 3. Prototype
 4. Abstract factory
