@@ -5,7 +5,7 @@
 ### Создание объектов. Нужны, что бы объекты точно удалялись (не оставались как балласт) и не удалялись раньше времени
 
 1. [Singleton](https://github.com/Grezer/patterns#singleton)
-2. Factory method
+2. [Factory method](https://github.com/Grezer/patterns#factory-method-virtual-constructor)
 3. Prototype
 4. Abstract factory
 5. Builder
@@ -113,7 +113,7 @@ single.DoSome();
 
 > Рассмотрим пример с редактором векторной графики.  
 > Все фигуры, доступные в данном приложении являются объектами подклассов базового класса Figure, в нашем примере – Rectangle, Ellipse и Romb.  
-> ![](./resources/factory_method/classes.png)
+> ![](./resources/factory_method/classes.png)  
 > Здесь пользователь сначала выбирает тип порождаемой фигуры в инструментальном меню, а потом по клику в рабочей области создается экземпляр соответствующего класса.  
 > Тогда код метода <i>panel_MouseDown</i> будет следующим:
 
@@ -182,7 +182,7 @@ if (currCreator != null)
 ### Структура
 
 <p align="center">
-  <img width="1100" height="400" src="./resources/factory_method/struct.png">
+  <img width="1100" height="380" src="./resources/factory_method/struct.png">
 </p>
 
 ### Участники
