@@ -21,7 +21,7 @@
 2. [Composite](https://github.com/Grezer/patterns#composite)
 3. [Decorator](https://github.com/Grezer/patterns#decorator-wrapper)
 4. [Proxy](https://github.com/Grezer/patterns#proxy-surrogate)
-5. Facade
+5. [Facade](https://github.com/Grezer/patterns#facade)
 6. Bridge
 7. Flyweight
 
