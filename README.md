@@ -29,9 +29,9 @@
 
 ### Изменение поведения объектов в run time (объект должен по разному себя вести в разные моменты времени)
 
-1. [Chain of Responsibility](https://github.com/Grezer/chain-of-responsibility)
-2. [Command](https://github.com/Grezer/command-action--transaction)
-3. [Iterator](https://github.com/Grezer/iterator-cursor)
+1. [Chain of Responsibility](https://github.com/Grezer/patterns#chain-of-responsibility)
+2. [Command](https://github.com/Grezer/patterns#command-action--transaction)
+3. [Iterator](https://github.com/Grezer/patterns#iterator-cursor)
 4. Observer
 5. State
 6. Strategy
