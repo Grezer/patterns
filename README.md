@@ -35,7 +35,7 @@
 4. [Observer](https://github.com/Grezer/patterns#observer-dependents-publish--subsribe)
 5. [State](https://github.com/Grezer/patterns#state)
 6. [Strategy](https://github.com/Grezer/patterns#strategy-policy)
-7. [Mediator](https://github.com/Grezer/patterns#strategy-policy)
+7. [Mediator](https://github.com/Grezer/patterns#mediator)
 8. Memento
 9. Template method
 10. Visitor
