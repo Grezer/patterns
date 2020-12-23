@@ -37,7 +37,7 @@
 6. [Strategy](https://github.com/Grezer/patterns#strategy-policy)
 7. [Mediator](https://github.com/Grezer/patterns#mediator)
 8. [Memento](https://github.com/Grezer/patterns#memento-token)
-9. Template method
+9. [Template method](https://github.com/Grezer/patterns#template-method-nvm--not-virtual-method)
 10. Visitor
 
 ## Cистемные: допишу
