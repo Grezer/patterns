@@ -40,9 +40,23 @@
 9. [Template method](https://github.com/Grezer/patterns#template-method-nvm--not-virtual-method)
 10. [Visitor](https://github.com/Grezer/patterns#visitor)
 
-## Cистемные: допишу
+## Cистемные: допишу если не сдохну
 
-## Принципы ООП (SOLID): допишу
+1. MVC
+2. MVP
+3. Session
+4. Worker Thread
+5. Thread Pool
+6. Callback
+7. Transaction
+
+## Принципы ООП (SOLID): допишу если не сдохну
+
+1. SRP
+1. OCP
+1. LSP
+1. ISP
+1. DIP
 
 ## Словечки
 
