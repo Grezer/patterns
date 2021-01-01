@@ -49,7 +49,7 @@
 3. [Session](https://github.com/Grezer/patterns#session)
 4. [Worker Thread](https://github.com/Grezer/patterns#worker-thread)
 5. [Thread Pool](https://github.com/Grezer/patterns#thread-pool)
-6. [Callback](https://github.com/Grezer/patterns#callback--hollywood)
+6. [Callback](https://github.com/Grezer/patterns#callback-hollywood)
 7. Transaction
 
 ## Принципы ООП (SOLID): допишу если не сдохну
