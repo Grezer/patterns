@@ -52,10 +52,6 @@
 6. [Callback](https://github.com/Grezer/patterns#callback-hollywood)
 7. [Transaction](https://github.com/Grezer/patterns#transaction)
 
-## Шаблоны проектирования в разработке программного обеспечения
-
-Надо ли?
-
 ## Принципы ООП (SOLID)
 
 1. [SRP](https://github.com/Grezer/patterns#srp)
@@ -63,6 +59,18 @@
 3. [LSP](https://github.com/Grezer/patterns#lsp)
 4. [ISP](https://github.com/Grezer/patterns#icp)
 5. [DIP](https://github.com/Grezer/patterns#dip)
+
+## GRASP
+
+1. Information Expert
+2. Creator
+3. Controller
+4. Low Coupling
+5. High Cohesion
+6. Polymorphism
+7. Pure Fabrication
+8. Indirection
+9. Protected Variations
 
 ## Словечки
 
