@@ -60,7 +60,7 @@
 
 1. [SRP](https://github.com/Grezer/patterns#srp)
 2. [OCP](https://github.com/Grezer/patterns#ocp)
-3. [LSP](https://github.com/Grezer/patterns#lcp)
+3. [LSP](https://github.com/Grezer/patterns#lsp)
 4. [ISP](https://github.com/Grezer/patterns#icp)
 5. [DIP](https://github.com/Grezer/patterns#dip)
 
