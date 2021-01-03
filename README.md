@@ -88,8 +88,8 @@ GRASP (<i>в отличие от паттернов GOF, которые опис
 1. [Information Expert (Информационный эксперт)](https://github.com/Grezer/patterns#information-expert-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82)
 1. [Creator (Создатель)](https://github.com/Grezer/patterns#creator-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C)
 1. ~~Controller (Контроллер)~~
-1. Low Coupling (Слабая связанность)
-1. High Cohesion (Сильное Сцепление)
+1. [Low Coupling (Слабая связанность)](https://github.com/Grezer/patterns#low-coupling-%D1%81%D0%BB%D0%B0%D0%B1%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C)
+1. [High Cohesion (Сильное Сцепление)](https://github.com/Grezer/patterns#high-cohesion-%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B5-%D0%B7%D0%B0%D1%86%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5)
 1. Polymorphism (Полиморфизм)
 1. Pure Fabrication (Чистая выдумка)
 1. Indirection (Посредник)
@@ -2191,7 +2191,7 @@ Dependency Injection - Внедрение Зависимостей
 
 - (+) Поведение системы обеспечивается классами, содержащими требуемую информацию
 
-- (+) Поддерживается High Cohesion
+- (+) Поддерживается [High Cohesion](https://github.com/Grezer/patterns#high-cohesion-%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B5-%D0%B7%D0%B0%D1%86%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5)
 
 - (-) Нарушение [SRP](https://github.com/Grezer/patterns#srp)
 
