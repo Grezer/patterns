@@ -90,9 +90,9 @@ GRASP (<i>в отличие от паттернов GOF, которые опис
 1. ~~Controller (Контроллер)~~
 1. [Low Coupling (Слабая связанность)](https://github.com/Grezer/patterns#low-coupling-%D1%81%D0%BB%D0%B0%D0%B1%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C)
 1. [High Cohesion (Сильное Сцепление)](https://github.com/Grezer/patterns#high-cohesion-%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B5-%D0%B7%D0%B0%D1%86%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5)
-1. Pure Fabrication (Чистая выдумка)
-1. Polymorphism (Полиморфизм)
+1. [Pure Fabrication (Чистая выдумка)](https://github.com/Grezer/patterns#pure-fabrication-%D1%87%D0%B8%D1%81%D1%82%D0%B0%D1%8F-%D0%B2%D1%8B%D0%B4%D1%83%D0%BC%D0%BA%D0%B0)
 1. Indirection (Посредник)
+1. Polymorphism (Полиморфизм)
 1. Protected Variations (Сокрытие реализации)
 
 ---
@@ -2292,3 +2292,23 @@ Dependency Injection - Внедрение Зависимостей
 - (+) Класс "ПостоянноеХранилище" будет обладать низкой степенью связывания и высокой степенью зацепления
 
 - (-) Данным паттерном не следует злоупотреблять, иначе будет много кода, который нужен только для того, что бы ваш дизайн "работал"
+
+---
+
+## Indirection (Перенаправление)
+
+[↑ В начало](https://github.com/Grezer/patterns#паттерны)
+
+### Проблема
+
+> Как перераспределить обязанности обьектов, чтобы обеспечить отсутствие прямого связывания?
+
+### Решение
+
+> Присвоить обязанности по обеспечению связи между службами или компонентами промежуточному объекту
+
+Другими словами: генерация промежуточного звена между объектами для ослабления связности (из GoF по этой теме: [Mediator](https://github.com/Grezer/patterns#mediator), [Decorator](https://github.com/Grezer/patterns#decorator-wrapper), [Proxy](https://github.com/Grezer/patterns#proxy-surrogate))
+
+### Пример
+
+Класс "Хранилище" (который обеспечивает работу с БД) выступает в роли промежуточного звена между классом "Продажа" и БД
