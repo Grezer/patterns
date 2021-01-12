@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vectorPainter", "vectorPainter\vectorPainter.csproj", "{C0239B5A-07AA-4BF2-99C9-E322C207CF6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0239B5A-07AA-4BF2-99C9-E322C207CF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0239B5A-07AA-4BF2-99C9-E322C207CF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0239B5A-07AA-4BF2-99C9-E322C207CF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0239B5A-07AA-4BF2-99C9-E322C207CF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EC621B8-1205-4B81-A664-07DC883DC871}
+	EndGlobalSection
+EndGlobal
