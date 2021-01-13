@@ -7,9 +7,8 @@ namespace vectorPainter
 
     public partial class Form1 : Form
     {
-        int mode = 0;
-        bool shiftPressed = false;
-        // Creator current = null;
+        // bool shiftPressed = false;
+        FigureCreator currentCreator = null;
         // Dictionary<string, Creator>
         private Picture picture = new Picture();
 
@@ -20,39 +19,24 @@ namespace vectorPainter
 
         private void rectangleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mode = 1;
+            currentCreator = new RectangleCreator();
         }
 
         private void ellipseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mode = 2;
+            currentCreator = new EllipseCreator();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             Figure newFigure = null;
-
-            switch (mode)
+            if (currentCreator != null)
             {
-                case 1:
-                    newFigure = new Rectangle();
-                    newFigure.Resize(50, 40);
-                    newFigure.Move(e.X, e.Y);
-                    newFigure.Draw(panel1.CreateGraphics());
-                    break;
-
-                case 2:
-                    newFigure = new Ellipse();
-                    newFigure.Resize(50, 40);
-                    newFigure.Move(e.X, e.Y);
-                    newFigure.Draw(panel1.CreateGraphics());
-                    break;
-
-                default:
-                    break;
+                newFigure = currentCreator.CreateFigure();
+                newFigure.Move(e.X, e.Y);
+                picture.Add(newFigure);
             }
-
-            picture.Add(newFigure);
+            Refresh();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

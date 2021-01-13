@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Figures\Ellipse\Ellipse.cs" />
+    <Compile Include="Figures\Ellipse\EllipseCreator.cs" />
     <Compile Include="Figures\Figure.cs" />
+    <Compile Include="Figures\FigureCreator.cs" />
+    <Compile Include="Figures\Rectangle\RectangleCreator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
