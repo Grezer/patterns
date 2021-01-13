@@ -12,14 +12,14 @@ namespace vectorPainter
     {
         // bool shiftPressed = false;
         FigureCreator currentCreator = null;
-        Dictionary<string, FigureCreator> figureCreators = new Dictionary<string, FigureCreator>();
         private Picture currentCanvas = new Picture();
+        Dictionary<string, FigureCreator> figureCreators;
 
         public Form1()
         {
             InitializeComponent();
-            figureCreators["Rectangle"] = new RectangleCreator();
-            figureCreators["Ellipse"] = new EllipseCreator();
+            FiguresDictionarySingleton figuresDictionarySingleton = FiguresDictionarySingleton.GetInstance();
+            figureCreators = figuresDictionarySingleton.figureCreators;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
