@@ -10,8 +10,12 @@ namespace vectorPainter
         // Add new figure in listFigures
         public void Add(Figure newFigure)
         {
-            if (newFigure == null) return;
-            if (listFigures.Contains(newFigure)) return;
+            if (newFigure == null) 
+                return;
+
+            if (listFigures.Contains(newFigure)) 
+                return;
+
             listFigures.Add(newFigure);
         }
 
