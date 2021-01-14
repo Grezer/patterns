@@ -7,6 +7,9 @@ namespace vectorPainter
     {
         private List<Figure> listFigures = new List<Figure>();
 
+        private Manipulator figureManipulator = new Manipulator();
+        public Manipulator FigureManipulator => figureManipulator;
+
         // Add new figure in listFigures
         public void Add(Figure newFigure)
         {
@@ -19,12 +22,28 @@ namespace vectorPainter
             listFigures.Add(newFigure);
         }
 
-        // Clear graphics and draw all figures from listFigures
+        // Draw manipulator (if is exist) and all figures from listFigures
         public void Draw(Graphics g)
         {
             g.Clear(Color.White);
+            figureManipulator.Draw(g);
             foreach (var figure in listFigures)
                 figure.Draw(g);
+        }
+
+        // Attach manipulator to the figure
+        public Figure Select(float xAxis, float yAxis)
+        {
+            Figure selectedFigure = null;
+
+            if (figureManipulator.Touch(xAxis, yAxis))
+                return figureManipulator.Selected;
+
+            foreach (var figure in listFigures)            
+                if (figure.Touch(xAxis, yAxis))                
+                    selectedFigure = figure;
+            figureManipulator.Attach(selectedFigure);
+            return selectedFigure;
         }
     }
 }

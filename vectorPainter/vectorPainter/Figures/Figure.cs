@@ -35,5 +35,14 @@ namespace vectorPainter
 
         // Draw figure => abstract method that inheritors must implement 
         public abstract void Draw(Graphics g);
+
+        // Return true if input coords get inside the figure
+        public virtual bool Touch(float xTouch, float yTouch)
+        {
+            return     xTouch >= private_xAxis
+                    && xTouch <= private_xAxis + private_width
+                    && yTouch >= private_yAxis
+                    && yTouch <= private_yAxis + private_height;
+        }
     }
 }
