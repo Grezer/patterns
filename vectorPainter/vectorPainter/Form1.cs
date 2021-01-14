@@ -40,8 +40,7 @@ namespace vectorPainter
             }
             else
             {
-                Figure selectedFigure = currentCanvas.Select(e.X, e.Y);
-                label1.Text = (selectedFigure != null).ToString();
+                currentCanvas.Select(e.X, e.Y);
             }
             Refresh();
         }
@@ -53,8 +52,17 @@ namespace vectorPainter
 
         private void chooseFigureCreator(object sender, EventArgs e)
         {
-             string figureName = sender.ToString();
-             currentCreator = GetFigureCreatorByName(figureName);
+            string figureName = sender.ToString();
+            currentCreator = GetFigureCreatorByName(figureName);
+
+            // Remove manipulator selection
+            currentCanvas.RemoveSelection();
+            Refresh();
+        }
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            string figureName = sender.ToString();
+            currentCreator = GetFigureCreatorByName(figureName);
         }
 
         private FigureCreator GetFigureCreatorByName(string figureName)

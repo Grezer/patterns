@@ -14,7 +14,7 @@ namespace vectorPainter
         // TODO: refactor this
         int activePoint;
 
-        public Figure Selected { get { return selectedFigure; } }
+        public Figure Selected => selectedFigure;
 
         // Attach manipulator to figure
         public void Attach(Figure figure)
@@ -31,7 +31,12 @@ namespace vectorPainter
         public override void Draw(Graphics g)
         {
             if (selectedFigure == null) return;
-            g.DrawRectangle(Pens.Red, xAxis - 2, yAxis - 2, width + 4, height + 4);
+            g.DrawRectangle(Pens.Red, xAxis - 5, yAxis - 5, width + 10, height + 10);
+
+            g.FillRectangle(Brushes.Red, xAxis - 10, yAxis - 10, 10, 10);
+            g.FillRectangle(Brushes.Red, xAxis - 10, yAxis + height, 10, 10);
+            g.FillRectangle(Brushes.Red, xAxis + width, yAxis - 10, 10, 10);
+            g.FillRectangle(Brushes.Red, xAxis + width, yAxis + height, 10, 10);
         }
 
         public void Drag(float dx, float dy)
@@ -40,6 +45,25 @@ namespace vectorPainter
             {
                 case 0:
                     this.Move(xAxis + dx, yAxis + dy);
+                    break;
+
+                case 1:
+                    this.Move(xAxis + dx, yAxis + dy);
+                    this.Resize(-dx + width, -dy + height);
+                    break;
+
+                case 2:
+                    this.Move(xAxis, yAxis + dy);
+                    this.Resize(dx + width, -dy + height);
+                    break;
+
+                case 3:
+                    this.Resize(dx + width, dy + height);
+                    break;
+
+                case 4:
+                    this.Move(xAxis + dx, yAxis);
+                    this.Resize(-dx + width, dy + height);
                     break;
             }
         }
@@ -52,30 +76,35 @@ namespace vectorPainter
                 return false;
             }
 
-            if (Math.Abs(xTouch - xAxis) <= 4 && Math.Abs(yTouch - yAxis) <= 4)
+            // left up
+            if (Math.Abs(xTouch - xAxis) <= 10 && Math.Abs(yTouch - yAxis) <= 10)
             {
                 activePoint = 1;
                 return true;
             }
 
-            if (Math.Abs(xTouch - xAxis - width) <= 4 && Math.Abs(yTouch - yAxis) <= 4)
+            // right up
+            if (Math.Abs(xTouch - xAxis - width) <= 10 && Math.Abs(yTouch - yAxis) <= 10)
             {
                 activePoint = 2;
                 return true;
             }
 
-            if (Math.Abs(xTouch - xAxis - width) <= 4 && Math.Abs(yTouch - yAxis - height) <= 4)
+            // right down
+            if (Math.Abs(xTouch - xAxis - width) <= 10 && Math.Abs(yTouch - yAxis - height) <= 10)
             {
                 activePoint = 3;
                 return true;
             }
 
-            if (Math.Abs(xTouch - xAxis) <= 4 && Math.Abs(yTouch - yAxis - height) <= 4)
+            // left down
+            if (Math.Abs(xTouch - xAxis) <= 10 && Math.Abs(yTouch - yAxis - height) <= 10)
             {
                 activePoint = 4;
                 return true;
             }
 
+            // center
             if (selectedFigure.Touch(xTouch, yTouch))
             {
                 activePoint = 0;

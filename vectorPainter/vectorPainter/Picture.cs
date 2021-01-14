@@ -13,10 +13,10 @@ namespace vectorPainter
         // Add new figure in listFigures
         public void Add(Figure newFigure)
         {
-            if (newFigure == null) 
+            if (newFigure == null)
                 return;
 
-            if (listFigures.Contains(newFigure)) 
+            if (listFigures.Contains(newFigure))
                 return;
 
             listFigures.Add(newFigure);
@@ -39,11 +39,16 @@ namespace vectorPainter
             if (figureManipulator.Touch(xAxis, yAxis))
                 return figureManipulator.Selected;
 
-            foreach (var figure in listFigures)            
-                if (figure.Touch(xAxis, yAxis))                
+            foreach (var figure in listFigures)
+                if (figure.Touch(xAxis, yAxis))
                     selectedFigure = figure;
             figureManipulator.Attach(selectedFigure);
             return selectedFigure;
+        }
+
+        public void RemoveSelection()
+        {
+            figureManipulator.Attach(null);
         }
     }
 }
