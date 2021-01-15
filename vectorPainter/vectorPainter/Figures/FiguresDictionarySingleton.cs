@@ -17,12 +17,10 @@ namespace vectorPainter
             };
         }
 
-        public Dictionary<string, FigureCreator> Add(string name, FigureCreator creator)
+        public void Add(string name, FigureCreator creator)
         {
             if (!figureCreators.ContainsKey(name) && creator != null)            
                 figureCreators.Add(name, creator);
-            
-            return figureCreators;
         }
 
         public static FiguresDictionarySingleton GetInstance()

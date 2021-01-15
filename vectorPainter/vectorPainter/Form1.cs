@@ -12,7 +12,6 @@ namespace vectorPainter
     {
         // 
         FigureCreator currentCreator = null;
-        Dictionary<string, FigureCreator> figureCreators;
         private Picture currentCanvas = new Picture();
         float oldX, oldY;
         sbyte numberOfCustomFigure = 1;
@@ -22,9 +21,6 @@ namespace vectorPainter
         public Form1()
         {
             InitializeComponent();
-            
-            // Get dictionary of figure creators
-            figureCreators = figuresDictionarySingleton.figureCreators;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -70,8 +66,8 @@ namespace vectorPainter
 
         private FigureCreator GetFigureCreatorByName(string figureName)
         {
-            if (figureCreators.Keys.Contains(figureName))
-                return figureCreators[figureName];
+            if (figuresDictionarySingleton.figureCreators.Keys.Contains(figureName))
+                return figuresDictionarySingleton.figureCreators[figureName];
             return null;
         }
 
@@ -88,7 +84,7 @@ namespace vectorPainter
 
             ProtoCreator cr = new ProtoCreator();
             cr.Prototype = currentCanvas.FigureManipulator.Selected.Clone();
-            figureCreators = figuresDictionarySingleton.Add(newFigureName, cr);
+            figuresDictionarySingleton.Add(newFigureName, cr);
 
             customFiguresToolStripMenuItem.DropDownItems.Add(newFigureButton);
         }
