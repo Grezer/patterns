@@ -10,18 +10,20 @@ namespace vectorPainter
 
     public partial class Form1 : Form
     {
+        // 
         FigureCreator currentCreator = null;
         Dictionary<string, FigureCreator> figureCreators;
         private Picture currentCanvas = new Picture();
-
         float oldX, oldY;
+        sbyte numberOfCustomFigure = 1;
+        FiguresDictionarySingleton figuresDictionarySingleton = FiguresDictionarySingleton.GetInstance();
+        
 
         public Form1()
         {
             InitializeComponent();
             
             // Get dictionary of figure creators
-            FiguresDictionarySingleton figuresDictionarySingleton = FiguresDictionarySingleton.GetInstance();
             figureCreators = figuresDictionarySingleton.figureCreators;
         }
 
@@ -50,6 +52,7 @@ namespace vectorPainter
             currentCanvas.Draw(e.Graphics);
         }
 
+
         private void chooseFigureCreator(object sender, EventArgs e)
         {
             string figureName = sender.ToString();
@@ -72,6 +75,23 @@ namespace vectorPainter
             return null;
         }
 
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (currentCanvas.FigureManipulator.Selected == null) return;
+
+            ToolStripMenuItem newFigureButton = new ToolStripMenuItem();
+            newFigureButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            newFigureButton.Click += chooseFigureCreator;
+
+            string newFigureName = "Fig." + numberOfCustomFigure++.ToString();
+            newFigureButton.Text = newFigureName;
+
+            ProtoCreator cr = new ProtoCreator();
+            cr.Prototype = currentCanvas.FigureManipulator.Selected.Clone();
+            figureCreators = figuresDictionarySingleton.Add(newFigureName, cr);
+
+            customFiguresToolStripMenuItem.DropDownItems.Add(newFigureButton);
+        }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {

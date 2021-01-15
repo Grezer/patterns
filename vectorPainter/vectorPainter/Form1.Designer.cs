@@ -35,6 +35,8 @@ namespace vectorPainter
             this.ellipseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customFiguresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +44,8 @@ namespace vectorPainter
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createToolStripMenuItem,
-            this.selectToolStripMenuItem});
+            this.selectToolStripMenuItem,
+            this.customFiguresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -93,6 +96,21 @@ namespace vectorPainter
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // customFiguresToolStripMenuItem
+            // 
+            this.customFiguresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem});
+            this.customFiguresToolStripMenuItem.Name = "customFiguresToolStripMenuItem";
+            this.customFiguresToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.customFiguresToolStripMenuItem.Text = "Custom figures";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +136,8 @@ namespace vectorPainter
         private System.Windows.Forms.ToolStripMenuItem ellipseToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem selectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customFiguresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
     }
 }
 

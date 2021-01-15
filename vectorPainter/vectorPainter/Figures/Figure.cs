@@ -39,10 +39,15 @@ namespace vectorPainter
         // Return true if input coords get inside the figure
         public virtual bool Touch(float xTouch, float yTouch)
         {
-            return     xTouch >= private_xAxis
+            return xTouch >= private_xAxis
                     && xTouch <= private_xAxis + private_width
                     && yTouch >= private_yAxis
                     && yTouch <= private_yAxis + private_height;
+        }
+
+        public virtual Figure Clone()
+        {
+            return null;
         }
     }
 }

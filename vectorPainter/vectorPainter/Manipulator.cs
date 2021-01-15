@@ -11,8 +11,15 @@ namespace vectorPainter
     {
         private Figure selectedFigure;
 
-        // TODO: refactor this
-        int activePoint;
+        /** Number of manipulator active point 
+         * -1   Nothing selected
+         *  0   Center of the figure (drag)
+         *  1   Top left corner of the figure (resize)
+         *  2   Top right corner of the figure (resize)
+         *  3   Bottom right corner of the figure (resize)
+         *  4   Bottom left corner of the figure (resize)
+         */
+        sbyte activePoint;
 
         public Figure Selected => selectedFigure;
 
@@ -65,6 +72,9 @@ namespace vectorPainter
                     this.Move(xAxis + dx, yAxis);
                     this.Resize(-dx + width, dy + height);
                     break;
+
+                default:
+                    break;
             }
         }
 
@@ -76,35 +86,35 @@ namespace vectorPainter
                 return false;
             }
 
-            // left up
+            // Top left corner of the figure
             if (Math.Abs(xTouch - xAxis) <= 10 && Math.Abs(yTouch - yAxis) <= 10)
             {
                 activePoint = 1;
                 return true;
             }
 
-            // right up
+            // Top right corner of the figure
             if (Math.Abs(xTouch - xAxis - width) <= 10 && Math.Abs(yTouch - yAxis) <= 10)
             {
                 activePoint = 2;
                 return true;
             }
 
-            // right down
+            // Bottom right corner of the figure
             if (Math.Abs(xTouch - xAxis - width) <= 10 && Math.Abs(yTouch - yAxis - height) <= 10)
             {
                 activePoint = 3;
                 return true;
             }
 
-            // left down
+            // Bottom left corner of the figure
             if (Math.Abs(xTouch - xAxis) <= 10 && Math.Abs(yTouch - yAxis - height) <= 10)
             {
                 activePoint = 4;
                 return true;
             }
 
-            // center
+            // Center of the figure
             if (selectedFigure.Touch(xTouch, yTouch))
             {
                 activePoint = 0;
